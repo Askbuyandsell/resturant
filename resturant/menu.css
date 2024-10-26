@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f4eb;
+    color: #333;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 2px solid #ccc;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+section {
+    padding: 40px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+.featured-items, .shareable-items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.menu-item img, .special-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.menu-item, .special-item, .shareable-item {
+    text-align: center;
+}
+
+.menu-item p, .special-item p, .shareable-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.specials{
+    height: auto;
+    width: auto;
+}
+
+.special-item{
+    height: auto;
+    width: auto;
+}
+
+.special-item img{
+    margin-left: -70%;
+    height: 300px;
+    width: 200px;
+}
+
+.special-item p {
+    margin-top: -20%;
+    margin-left: 30%;
+    margin-right: 30%;
+
+}
+
+
+/* .specials {
+    background-color: #f1e9da;
+    padding: 40px;
+    text-align: center;
+    
+}
+
+.specials img{
+    width: 20%;
+    height: 20%;
+    border-radius: 10px;
+}
+
+.special-item span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d9534f;
+    display: block;
+    margin-top: 5px;
+} */
+
+.shareable {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: 1%; */
+    height: auto;
+    width: auto;
+    /* padding-top: 40%; */
+}
+.topic{
+    margin-top: -25%;
+}
+
+.shareable img {
+    order: 2; /* Ensures the image is on the right */
+    border-radius: 20px;
+    height: 300px;
+    width: 200px;
+    margin-right: 50%; /* Adds some space to the right of the image */
+}
+
+.list {
+    margin-top: 100px;
+    order: 1; /* Ensures the list is on the left */
+    flex: 1;
+    font-weight: bold;
+    padding-left: 8%;
+    text-align: left; /* Keeps the list aligned to the left */
+}
+
+.name{
+    margin-left: -25%;
+
+}
+
+.shareable2{
+    margin-top: -65%;
+}
+
+
+/* footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 2px solid #ccc;
+    margin-top: 40px;
+} */

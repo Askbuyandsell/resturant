@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinner Menu</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 20px;
+        }
+        header {
+            text-align: center;
+            background-color: #333;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 50px 0;
+            border-radius: 20px;
+        }
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+            gap: 20px;
+        }
+        .menu-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            
+            
+        }
+        .menu-item h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .menu-item p {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+        .menu-item span {
+            font-weight: bold;
+            color: #4CAF50; /* Green color for prices */
+        }
+
+        .menu-item img{
+            height: 300ppx;
+            width: 200px;
+        }
+
+        .menu-item:hover{
+            transform: scale(1.1);
+            z-index: 3;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            transform: rotateX(-5deg);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        footer p {
+            font-size: 1.2em;
+            margin: 0;
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Dinner Menu</h1>
+    <p>Delicious meals made with fresh ingredients</p>
+</header>
+
+<div class="container">
+    <div class="menu-grid">
+        <div class="menu-item">
+            <h2>Grilled Salmon</h2>
+            <img src="https://www.allrecipes.com/thmb/CfocX_0yH5_hFxtbFkzoWXrlycs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ALR-12720-grilled-salmon-i-VAT-4x3-888cac0fb8a34f6fbde7bf836850cd1c.jpg" alt="">
+            <p>Fresh salmon fillet grilled to perfection.</p>
+            <span>$25.00</span>
+        </div>
+        <div class="menu-item">
+            <h2>Spaghetti Carbonara</h2>
+            <img src="https://www.allrecipes.com/thmb/CfocX_0yH5_hFxtbFkzoWXrlycs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ALR-12720-grilled-salmon-i-VAT-4x3-888cac0fb8a34f6fbde7bf836850cd1c.jpg" alt="">
+            <p>Pasta with creamy sauce, pancetta, and parmesan.</p>
+            <span>$18.00</span>
+        </div>
+        <div class="menu-item">
+            <h2>Caesar Salad</h2>
+            <img src="https://www.allrecipes.com/thmb/CfocX_0yH5_hFxtbFkzoWXrlycs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ALR-12720-grilled-salmon-i-VAT-4x3-888cac0fb8a34f6fbde7bf836850cd1c.jpg" alt="">
+            <p>Crisp romaine lettuce with Caesar dressing and croutons.</p>
+            <span>$10.00</span>
+        </div>
+        <div class="menu-item">
+            <h2>Chocolate Cake</h2>
+            <img src="https://www.allrecipes.com/thmb/CfocX_0yH5_hFxtbFkzoWXrlycs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ALR-12720-grilled-salmon-i-VAT-4x3-888cac0fb8a34f6fbde7bf836850cd1c.jpg" alt="">
+            <p>Rich chocolate cake with a creamy frosting.</p>
+            <span>$8.00</span>
+        </div>
+        <div class="menu-item">
+            <h2>Vegetable Stir Fry</h2>
+            <img src="https://www.allrecipes.com/thmb/CfocX_0yH5_hFxtbFkzoWXrlycs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ALR-12720-grilled-salmon-i-VAT-4x3-888cac0fb8a34f6fbde7bf836850cd1c.jpg" alt="">
+            <p>A mix of seasonal vegetables stir-fried with soy sauce.</p>
+            <span>$15.00</span>
+        </div>
+        <div class="menu-item">
+            <h2>Chicken Alfredo</h2>
+            <img src="https://www.allrecipes.com/thmb/CfocX_0yH5_hFxtbFkzoWXrlycs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ALR-12720-grilled-salmon-i-VAT-4x3-888cac0fb8a34f6fbde7bf836850cd1c.jpg" alt="">
+            <p>Grilled chicken served with fettuccine and Alfredo sauce.</p>
+            <span>$20.00</span>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <p>&copy; 2024 [Restaurant Name]. All rights reserved.</p>
+</footer>
+</body>
+</html>

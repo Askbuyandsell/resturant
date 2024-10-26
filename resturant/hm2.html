@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Name - Unforgettable Dining Experience</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            perspective: 1000px;
+            overflow-x: hidden;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Header styles */
+        header {
+            background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('restaurant-header.jpg') no-repeat center center/cover; /* Hero Image background */
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            transform: rotateX(5deg);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 4em;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            animation: fadeInDown 1.5s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav {
+            margin-top: 30px;
+        }
+
+        nav a {
+            margin: 0 20px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: 600;
+            transition: color 0.3s ease, transform 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #f0a500;
+            transform: scale(1.15);
+        }
+
+        /* Slider Section */
+        .slider {
+            width: 100%;
+            height: 80vh;
+            position: relative;
+            margin-top: -60px;
+            overflow: hidden;
+            transform-style: preserve-3d;
+        }
+
+        .slides {
+            display: flex;
+            width: 300%;
+            height: 100%;
+            animation: slide 10s infinite;
+        }
+
+        .slides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.9);
+            transition: transform 5ms ease-in-out;
+        }
+
+        .slides img:hover {
+            transform: scale(1.05);
+        }
+
+        
+        @keyframes slide {
+            0% {
+                transform: translateX(0%);
+            }
+            33% {
+                transform: translateX(-100%);
+            }
+            66% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        
+
+        /* Hero section */
+        .hero {
+            height: 100vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url('restaurant-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
+            animation: fadeInZoom 2s ease-in-out;
+        }
+
+        @keyframes fadeInZoom {
+            from {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .hero h2 {
+            font-size: 5em;
+            margin: 0;
+            text-transform: uppercase;
+            color: #f0a500;
+            letter-spacing: 8px;
+            transform: scale(1.1);
+            animation: fadeInText 1s ease-in-out 0.5s both;
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero p {
+            color: red;
+            font-size: 2em;
+            margin-top: 10px;
+            font-style: italic;
+            letter-spacing: 3px;
+            animation: fadeInText 1.2s ease-in-out 1.2s both;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            color: white;
+            background-color: #f0a500;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(240, 165, 0, 0.5);
+            animation: fadeInText 1.2s ease-in-out 1.4s both;
+        }
+
+        .btn:hover {
+            background-color: #d48a00;
+            transform: translateY(-5px);
+        }
+
+        /* Map Section */
+        .map-section {
+            padding: 50px 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .map-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        iframe {
+            border: none;
+        }
+
+        /* About section */
+        .about {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(45deg, #fff, #f7f7f7);
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .about h3 {
+            font-size: 3.5em;
+            color: #333;
+            margin-bottom: 30px;
+            letter-spacing: 4px;
+        }
+
+        .about p {
+            font-size: 1.5em;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Menu Section */
+        .menu {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: #222;
+            color: #fff;
+            transform: rotateX(3deg);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu h3 {
+            font-size: 3.5em;
+            color: #f0a500;
+            letter-spacing: 5px;
+            margin-bottom: 30px;
+        }
+
+        .menu-items {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .menu-item {
+            margin: 20px;
+            padding: 30px;
+            background-color: #333;
+            border-radius: 20px;
+            max-width: 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-15px) rotateY(10deg);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .menu-item h4 {
+            font-size: 2em;
+            color: #f0a500;
+            margin-bottom: 15px;
+        }
+
+        .menu-item p {
+            font-size: 1.2em;
+            color: #ccc;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            transform: rotateX(-5deg);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        footer p {
+            font-size: 1.2em;
+            margin: 0;
+            color: #bbb;
+        }
+
+        /* Scroll-up button */
+        .scroll-up {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f0a500;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+            color: white;
+            font-size: 2em;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .scroll-up:hover {
+            transform: translateY(-5px);
+            background-color: #d48a00;
+        }
+
+        .scroll-up i {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Restaurant Name</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Slider Section -->
+    <section class="slider">
+        <div class="slides">
+            <img src="https://media.istockphoto.com/id/1218016941/photo/composition-with-delicious-sushi-rolls-japanese-food.jpg?s=612x612&w=0&k=20&c=jmFC9cqBPSXzKhL7o2hppD4i8Oo8qY5QwuXQujJsob0=" alt="Delicious Dish 1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaFxqImPYmNhBeisdQAqJpEY_vaZhnyx0WtA&s" alt="Delicious Dish 2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjdGqb08hhVbvcLR7Xd34qtgrzA9BjKEwVNA&s" alt="Delicious Dish 3">
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Unforgettable Dining Experience</h2>
+        <br>
+        <p>Where Flavor Meets the Moment</p><br>
+        <a href="/menu2.html" class="btn">View Menu</a>
+        <br>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8465169174286!2d144.9632804158454!3d-37.81520787975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d47e4a0b49d%3A0x7ef9aa15f7b1cf9e!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1614157996463!5m2!1sen!2sau" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h3>About Us</h3>
+        <p>
+            Welcome to [Restaurant Name], where we combine exquisite flavors, a cozy atmosphere, and impeccable service to deliver an unforgettable dining experience. We pride ourselves on using the finest ingredients to create innovative dishes that tantalize your taste buds.
+        </p>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <h3>Our Menu</h3>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h4>Grilled Steak</h4>
+                <p>Succulent grilled steak served with a side of fresh vegetables.</p>
+            </div>
+            <div class="menu-item">
+                <h4>Seared Salmon</h4>
+                <p>Perfectly seared salmon filet with lemon butter sauce.</p>
+            </div>
+            <div class="menu-item">
+                <h4>Caesar Salad</h4>
+                <p>Classic Caesar salad with crunchy croutons and Parmesan cheese.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 [Restaurant Name]. All rights reserved.</p>
+    </footer>
+
+    <!-- Scroll-up Button -->
+    <a href="#" class="scroll-up">
+        <i>&uarr;</i>
+    </a>
+
+
+    <script>
+        let currentSlide = 1;
+        const slides = document.querySelector('.slides');
+        const totalSlides = 3;  // Total number of images
+    
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                slides.style.transform = `translateX(-${(currentSlide - 1) * 100}%)`;
+            } else {
+                // Loop back to the second slide
+                currentSlide = 2;
+                slides.style.transform = `translateX(-${(currentSlide - 1) * 50}%)`;
+            }
+        }
+    
+        // Set interval to change slide every 5 seconds
+        setInterval(nextSlide, 5000);  // Adjust the time as necessary
+    </script>
+    
+    
+</body>
+
+</html>

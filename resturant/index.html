@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        nav {
+            background-color: #444;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            color: #ff6347;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .menu-section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .menu-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 30%;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 30px 0 20px 2px rgba(0, 0, 0, .1);
+        };
+
+        .menu-item:hover{
+            transform: scale(1.2);
+            z-index: 2;
+        }
+        .menu-item h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .menu-item p {
+            color: #555;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        marquee{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 25px;
+            background-color: #ff6347;
+            color: #f4f4f4;
+        }
+
+        img{
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to The Gourmet Bistro</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <marquee behavior="" direction="">Welcome to our resturant</marquee>
+
+    <div class="container">
+        <h2>Our Menu</h2>
+        <div class="menu-section">
+            <div class="menu-item">
+                <h3>Grilled Chicken</h3>
+                <img src="https://media.istockphoto.com/id/496919860/photo/bbq-chicken-whole.jpg?s=612x612&w=0&k=20&c=CCoJhS4M6I1Vg-Tc5AjiqMEhxS0AFQIp90KpEvASaHU=" alt="">
+                <p>Juicy chicken grilled to perfection with a side of fresh vegetables.</p>
+                <p><strong>$12.99</strong></p>
+            </div>
+            <div class="menu-item">
+                <h3>Vegetarian Pizza</h3>
+                <p>Delicious pizza topped with fresh vegetables and mozzarella cheese.</p>
+                <p><strong>$9.99</strong></p>
+            </div>
+            <div class="menu-item">
+                <h3>Spaghetti Bolognese</h3>
+                <p>Classic spaghetti served with a rich, hearty meat sauce.</p>
+                <p><strong>$10.99</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 The Gourmet Bistro. All rights reserved.</p>
+    </footer>
+</body>
+</html>
